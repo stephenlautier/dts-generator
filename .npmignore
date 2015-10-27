@@ -1,5 +1,8 @@
 .gitignore
 *.ts
 typings/
+tasks/
+tests/
 tsconfig.json
+tslint.json
 tsd.json
