@@ -188,8 +188,7 @@ export function generate(options: Options, sendMessage: (message: string) => voi
 
 		if (options.main) {
 			output.write(`declare module '${options.name}' {` + eol + indent);
-			output.write(`import main = require('${options.main}');` + eol + indent);
-			output.write('export = main;' + eol);
+			output.write(`export * from '${options.main}';` + eol);
 			output.write('}' + eol);
 			sendMessage(`Aliased main module ${options.name} to ${options.main}`);
 		}
